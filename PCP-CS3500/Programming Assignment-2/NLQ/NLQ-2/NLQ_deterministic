@@ -1,0 +1,20 @@
+time taken by thread0= 11184.115474 mSec 
+time taken by thread1= 8769.522805 mSec 
+time taken by thread2= 17315.339855 mSec 
+time taken by thread3= 10992.558295 mSec 
+time taken by thread4= 9085.854754 mSec 
+time taken by thread5= 8786.601838 mSec 
+time taken by thread6= 10992.513051 mSec 
+time taken by thread7= 8158.791885 mSec 
+time taken by thread8= 11600.525555 mSec 
+time taken by thread9= 11786.721775 mSec 
+time taken by thread10= 17788.218166 mSec 
+time taken by thread11= 8769.966063 mSec 
+time taken by thread12= 8147.861508 mSec 
+time taken by thread13= 17309.914930 mSec 
+time taken by thread14= 8755.767941 mSec 
+time taken by thread15= 8755.776800 mSec 
+Total time taken bu Enqueue Oparation: 0.000000 ms
+Total time taken bu Dequeue Oparation: 178200.050695 ms
+waitFree Queue Threads Avg execution time: 11137.503168
+waitFree Queue Avg of enq and deq execution time: 178200.050695
