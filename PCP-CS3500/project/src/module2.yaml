@@ -1,0 +1,45 @@
+---
+apiVersion: v1
+kind: List
+
+items:
+
+- apiVersion: apps/v1 #extensions/v1beta1
+  kind: Deployment
+  metadata:
+    name: sawtooth-0-module2-pod
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: sawtooth-0-module2
+     
+    template:
+      metadata:
+        labels:
+          app: sawtooth-0-module2
+      spec:
+        containers:
+          - name: sawtooth-settings-tp
+            image: hyperledger/sawtooth-settings-tp:nightly
+            command:
+              - bash
+            args:
+              - -c
+              - "settings-tp -vv -C tcp://10.244.0.108:4004" #- "settings-tp -vv -C tcp://$HOSTNAME:4004"
+
+          - name: sawtooth-intkey-tp-python
+            image: hyperledger/sawtooth-intkey-tp-python:nightly
+            command:
+              - bash
+            args:
+              - -c
+              - "intkey-tp-python -vv -C tcp://10.244.0.108:4004"
+
+          - name: sawtooth-xo-tp-python
+            image: hyperledger/sawtooth-xo-tp-python:nightly
+            command:
+              - bash
+            args:
+              - -c
+              - "xo-tp-python -vv -C tcp://10.244.0.108:4004"
